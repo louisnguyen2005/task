@@ -89,4 +89,46 @@
   text-align: center;
  }
 
+ @media( (min-width: 430px) and (max-width: 932px)){
+  header{
+    height: 65%;
+  }
+  .add{
+    padding: 0.7rem;
+    font-size: 18px;
+    height: 2.8rem;
+    font-weight:bold
+    
+  }
+  .main-nav{
+  transform: translateY(3%);
+  }
+  .search{
+    margin-left: 40vw;
+  }
+  .box {
+    position: relative;
+    bottom: 2rem;
+  }
+  #message{
+    position: absolute;
+    top: 1rem;
+    left: 31rem;
+    width: 10rem;
+  }
+  #bird {
+    
+    position: relative;
+    bottom: 0rem;
+    left: 1rem;
+}
+.slogan h1 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 1rem 0;
+  position: relative;
+  right: 7.5rem;
+}
+ }
+
 

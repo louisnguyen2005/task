@@ -98,7 +98,7 @@
             <strong class="name">Chicken</strong>
             <div class="value">99000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-2 product">
           <img
@@ -110,7 +110,7 @@
             <strong class="name">Noodles</strong>
             <div class="value">68000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-3 product">
           <img class="img-product" src="../assets/muc.jpg" alt="product 3" />
@@ -118,7 +118,7 @@
             <strong class="name">Squid</strong>
             <div class="value">157000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-4 product">
           <img class="img-product" src="../assets/banhmi.jpg" alt="product 4" />
@@ -126,7 +126,7 @@
             <strong class="name">Bread</strong>
             <div class="value">60000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-5 product">
           <img class="img-product" src="../assets/bo.jpg" alt="product 5" />
@@ -134,7 +134,7 @@
             <strong class="name">Steak</strong>
             <div class="value">450000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-6 product">
           <img class="img-product" src="../assets/bone.jpg" alt="product 6" />
@@ -142,7 +142,7 @@
             <strong class="name">Cown</strong>
             <div class="value">388000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-7 product">
           <img class="img-product" src="../assets/chaca.jpg" alt="product 7" />
@@ -150,7 +150,7 @@
             <strong class="name">Korean</strong>
             <div class="value">98000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
 
         <div class="item-8 product">
@@ -163,7 +163,7 @@
             <strong class="name">Com suon</strong>
             <div class="value">95000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="title_2 title">HOT-SELLER</div>
         <div class="item-9 product">
@@ -176,7 +176,7 @@
             <strong class="name">France</strong>
             <div class="value">250000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-10 product">
           <img class="img-product" src="../assets/kem.jpg" alt="product 10" />
@@ -184,7 +184,7 @@
             <strong class="name">Ice cream</strong>
             <div class="value">49000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
 
         <div class="item-11 product">
@@ -193,7 +193,7 @@
             <strong class="name">Shushi</strong>
             <div class="value">300000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-12 product">
           <img class="img-product" src="../assets/trấu.webp" alt="product 12" />
@@ -201,7 +201,7 @@
             <strong class="name">Milk Tea</strong>
             <div class="value">50000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-13 product">
           <img
@@ -213,7 +213,7 @@
             <strong class="name">Lobster</strong>
             <div class="value">1050000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-14 product">
           <img class="img-product" src="../assets/miy.jpeg" alt="product 14" />
@@ -221,7 +221,7 @@
             <strong class="name">Pasta</strong>
             <div class="value">88000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-15 product">
           <img class="img-product" src="../assets/miy.jpeg" alt="product 15" />
@@ -229,7 +229,7 @@
             <strong class="name">Pasta</strong>
             <div class="value">98000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
         <div class="item-16 product">
           <img class="img-product" src="../assets/miy.jpeg" alt="product 16" />
@@ -237,7 +237,7 @@
             <strong class="name">Pasta</strong>
             <div class="value">188000</div>
           </div>
-          <div class="add">Thêm ngay</div>
+          <div class="add">Add</div>
         </div>
       </div>
     </main>
@@ -360,6 +360,24 @@
         });
       });
       window.addEventListener("load", addEventToAllCartButtons, false);
+    </script>
+    <script>
+      let mainNav = document.querySelector(".main-nav");
+      let mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+
+      // Toggle the main navigation menu on mobile
+      mobileMenuBtn.onclick = function () {
+        let isClosed = mainNav.clientHeight === 0;
+        mainNav.style.height = isClosed ? "auto" : "0";
+      };
+
+      // Collapse menu after clicking a link
+      let menuItems = document.querySelectorAll(".main-nav a");
+      menuItems.forEach((menuItem) => {
+        menuItem.onclick = function () {
+          mainNav.style.height = "0";
+        };
+      });
     </script>
   </body>
 </html>

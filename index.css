@@ -836,8 +836,10 @@ height: 3rem;
 
   .page-main-menu > div {
     font-size: 1.5rem;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
   }
+
+
 
   /* Footer */
   .page-footer {
@@ -873,9 +875,10 @@ height: 3rem;
 
   /* Sản phẩm */
   .product {
-    width: 90%;
-    max-height: auto;
+    width: 80%;
+    height: fit-content;
     margin: 1rem auto;
+    padding: 3.5rem;
   }
 
   .product img {
