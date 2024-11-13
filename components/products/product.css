@@ -1,0 +1,45 @@
+.product{
+    height: 600px;
+
+}
+
+.product img{
+    width: 15.8rem;
+}
+
+
+
+ 
+
+
+.slick-next {
+  display: none;
+}
+
+.slick-dots{
+  transform: translateY(-250%);
+} 
+
+.cart:before {
+  
+  font-size: 2rem;
+}
+.slick-dots li button:before {
+  
+  opacity: .0 !important;
+
+}
+.slick-next:before, .slick-prev:before {
+display: none;
+}
+
+
+.slick-dots li i {
+  font-size: 25px;
+  color: #c0c0c0;
+}
+
+.page-main-banner{
+  padding-top: 3rem;
+}
+
