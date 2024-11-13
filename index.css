@@ -82,7 +82,7 @@ gap: 3px;
 header{
   background-color:#e31837 ; 
   background-position: center;
-  max-height: 2000px;
+  max-height: 200px;
 display: grid;
 grid-template-rows: repeat(3,1fr);
 }
@@ -195,7 +195,7 @@ padding: 0 1rem;
   position: absolute;
   color: #fff;
   right: 3px;
-  top: 135px;
+  top: -3px;
   font-size: 0.65rem;
   font-weight: bold;
   padding: 3px;
@@ -717,60 +717,236 @@ height: 3rem;
         font-size: 24px;
       }
 
-      @media (max-width: 740px) {
-        .main-nav {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          overflow: hidden;
- transform: translateY(-3%);
-        }
-  
-        .main-nav a {
-          display: block;
-          width: 26rem;
-          font-size: 2rem;
-          color: #ffffff;
-          background-color: #f85050;
-          margin: 0;
-          padding: 1.2rem;
-        }
-  
-        .mobile-menu-btn {
-          display: block;
-        }
-  
-        .menu-icon {
-          color: white;
-          transform: translateY(-20%);
-        }
-        .fa-bars:before{
-          font-size: 3.5rem;
-          
-        }
-        .search{
-          position: relative;
-          left: -10rem;
-        }
-        .input input{
-          height: 4rem;
-            font-size: 1.5rem;
-            width: auto;
-        }
-        .input i{
-          font-size: 2rem;
-          transform: translateX(100%);
-        }
-        .user-auth {
-          margin-right: 5rem;
-        }
-        .page-header{
-          height: 16rem;
-        }
-        .user-auth a{
-          width: 150px;
-          height: 50px;
-          font-size: ;
-        }
-      }
+@media (min-width: 430px) and (max-width: 932px){
+  /* Thiết lập lại font và padding cho toàn bộ trang */
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Header */
+  header {
+    max-height: 300px;
+    padding: 1rem;
+  }
+
+  .page-header-one img {
+    width: 15rem;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Thanh Menu */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    transform: translateY(-3%);
+  }
+
+  .main-nav a {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #f85050;
+    margin: 0;
+    padding: 1.2rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .menu-icon {
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  /* Slogan */
+  .slogan h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+    position: relative;
+    right: 6rem;
+  }
+
+
+
+  /* User Authentication */
+  .user-auth a {
+    width: 120px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+
+  .user-auth {
+    margin-right: 5rem;
+  }
+
+  /* Shopping Cart */
+  .shopping-cart {
+    font-size: 2rem;
+  }
+
+  /* Search Box */
+  .search {
+    margin: 0;
+    justify-content: center;
+    position: relative;
+    left: -10rem;
+  }
+
+  .input input {
+    height: 3rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: auto;
+  }
+
+  .input i {
+    font-size: 1.5rem;
+    right: 1rem;
+  }
+
+  /* Menu Chính - .page-main-menu */
+  .page-main-menu {
+    grid-template-areas:
+      'title_1 title_1'
+      'item-1 item-2'
+      'item-3 item-4'
+      'item-5 item-6'
+      'item-7 item-8'
+      'title_2 title_2'
+      'item-9 item-10'
+      'item-11 item-12'
+      'item-13 item-14'
+      'item-15 item-16';
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .page-main-menu > div {
+    font-size: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  /* Footer */
+  .page-footer {
+    grid-template-areas:
+      'logo'
+      'first'
+      'second'
+      'third'
+      'last';
+    text-align: center;
+  }
+
+  .logo-infooter img {
+    width: 80%;
+    height: auto;
+  }
+
+  .second-content, .third-content, .first-content {
+    margin: 0;
+  }
+
+  /* Left Banner */
+  .left-banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container-time {
+    width: 8rem;
+    height: auto;
+    padding: 1rem;
+  }
+
+  /* Sản phẩm */
+  .product {
+    width: 90%;
+    max-height: auto;
+    margin: 1rem auto;
+  }
+
+  .product img {
+    height: 10rem;
+  }
+
+  /* Tin Tức */
+  .news h1 {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .check {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  .check .img-of-check img {
+    height: 10rem;
+  }
+
+  .contain-a a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+    /* CSS FOR SHOWCART */
+    .container-items-cart {
+      margin: 10px auto;
+      width: 90%;
+    }
+    
+    .list-items {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    .list-head th {
+        background-color:#e31840 ; 
+        border: 1px solid black;
+        padding: 10px 3px;
+    }
+    
+    :is(.list-foot, .list-body) :is(td, th) {
+        border: 1px solid black;
+        padding: 3px;
+    }
+    
+    .list-body tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    
+    
+    .list-foot tr td {
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .list-foot tr td:first-child {
+        text-align: right;
+        padding-right: 10px;
+    }
+    
+    
+    .list-items td, .list-items th {
+        text-align: center;
+    }
+    
+    .title-cart-list {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
