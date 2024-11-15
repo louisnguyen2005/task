@@ -4,8 +4,8 @@ function checkEmail() {
   if (
     elEmail.value.indexOf("@") < 5 ||
     !(elEmail.value.endsWith("@gmail.com") ||
-    elEmail.value.endsWith("@gmail.vn")
-  )) {
+    elEmail.value.endsWith("@gmail.vn"))
+  ) {
     elMsg.textContent = "⚠️Check your email again,bro!";
     elMsg.classList.remove("passed");
     elMsg.classList.add("error");
@@ -25,7 +25,7 @@ function checkPass() {
   let elMsg = document.getElementById("check-pas");
 
   if (this.value.length < 5) {
-    elMsg.textContent = "⚠️Check your password agian!";
+    elMsg.textContent = "⚠️Check your password again!";
     elMsg.classList.remove("passed");
     elMsg.classList.add("error");
     return false;
@@ -36,6 +36,7 @@ function checkPass() {
     return true;
   }
 }
+
 var elPass = document.getElementById("password");
 elPass.onblur = checkPass;
 
@@ -46,15 +47,15 @@ document.getElementById("login-link").addEventListener("click", function (e) {
   if (!email || !pas) {
     e.preventDefault();
     alert("Please check your log-in again!");
+  } else {
+    alert("Chúc mừng bạn đã đăng nhập thành công!");
+    window.location.href = "./index.html";
   }
 });
 
-
 let togglePas = document.getElementById("togglePassword");
 let pasinput = document.getElementById("password");
-togglePas.addEventListener("click",function(){
-  let type = pasinput.getAttribute("type") === "password" ? "text" : "password"; 
-  pasinput.setAttribute("type",type);
-  
-}
-)
+togglePas.addEventListener("click", function () {
+  let type = pasinput.getAttribute("type") === "password" ? "text" : "password";
+  pasinput.setAttribute("type", type);
+});

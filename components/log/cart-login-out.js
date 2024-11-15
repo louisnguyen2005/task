@@ -67,7 +67,7 @@ function addEventToAllCartButtons() {
 function showCart() {
     if(localStorage.cartItems == undefined){
         alert('Your cart is empty. Please go back homepage to shopping.');
-        location.href = "product-list.html";
+        location.href = "login-out.html";
     } else {
         let custommerCart = JSON.parse(localStorage.getItem('cartItems'));
         const tblHead = document.getElementsByTagName('thead')[0];
@@ -129,3 +129,20 @@ const formatCurrency = (amount, locale = "vi-VN") => {
         maximumFractionDigits: 2
     }).format(amount);
 }
+
+// Search item //
+document.addEventListener("DOMContentLoaded", function () {
+    document
+      .getElementById("search-input")
+      .addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        const products = document.querySelectorAll(".product");
+  
+        products.forEach((product) => {
+          const productName = product
+            .querySelector(".name")
+            .textContent.toLowerCase();
+          product.style.display = productName.includes(query) ? "block" : "none";
+        });
+      });
+  });

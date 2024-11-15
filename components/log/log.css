@@ -64,6 +64,10 @@ width: 80%;
     display: flex;
 }
 
+.content-email{
+    position: relative;
+    top: 3rem;
+}
 
 .move-email{
     position: relative;
@@ -152,9 +156,9 @@ label{
     text-align: center;
 } */
 
-.pas{
-    transform: translateY(-20%);
-}
+/* .pas{
+    transform: translateY(-50%);
+} */
 
 @media (min-width: 430px) and (max-width: 932px){
     .log{
@@ -168,7 +172,7 @@ label{
     .move label{
         font-size: 15px;
       position: relative;
-      right: 2.5rem;
+      right: 1.3rem;
     }
     .email input, .password input{
         font-size: 15px;
@@ -202,14 +206,15 @@ label{
     }
     .content-email{
         position: relative;
-        top: 2rem;
+        top: 5rem;
+
     }
     .check-pas, .check-email{
         font-size: 10px;
     }
     .pas{
         position: relative;
-        bottom: 0.2rem;
+        top: 1rem;
     }
     .regis{
         position: relative;

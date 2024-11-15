@@ -12,7 +12,7 @@
     background-size: cover;
   }
   
-  .log {
+  .reg {
     border: 2px solid black;
     background: rgba(0, 0, 0, 0.8);
     height: 42rem;
@@ -21,28 +21,6 @@
     padding: 1rem;
   }
   
-  .login {
-    font-size: 2rem;
-    padding: 1.5rem 3rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-  
-  .login a {
-    text-decoration: none;
-    color: rgb(66, 82, 82);
-  }
-  
-  .login p {
-    border: 2px solid red;
-    width: fit-content;
-    background-image: linear-gradient(130deg, rgb(250, 129, 238), rgb(241, 91, 153), rgb(250, 129, 238), rgb(241, 91, 153));
-    transition: all 0.4s ease;
-    box-shadow: 2px 2px 2px 2px #f85d84;
-    font-weight: bold;
-    color: black;
-  }
   
   /* Username field */
   .username {
@@ -133,7 +111,7 @@
   /* Register button */
   #register-button {
     font-size: 1.8rem;
-    width: 80%;
+    width:  45%;
     height: 3.5rem;
     margin-top: 2rem;
     background-image: linear-gradient(130deg, rgb(241, 91, 153), rgb(250, 129, 238));
@@ -159,4 +137,27 @@
     font-weight: 600;
     color: aliceblue;
   }
-  
+/* Responsive Design for screens between 430px and 932px */
+@media (min-width: 430px) and (max-width: 932px) {
+  .reg {
+      width: 85%;
+      height: auto;
+      padding: 1rem;
+  }
+
+  input {
+      font-size: 1.3rem;
+      width: 90%;
+      height: 2.8rem;
+  }
+
+  label {
+      font-size: 1.4rem;
+  }
+
+  #register-button {
+      font-size: 1.5rem;
+      height: 3rem;
+      width: 10rem;
+  }
+}

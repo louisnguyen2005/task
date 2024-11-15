@@ -3,8 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project</title>
-    <link rel="stylesheet" href="../../index.css" />
-
+    <link rel="stylesheet" href="../log/login-out.css">
     <link rel="stylesheet" href="./product.css" />
     <link rel="icon" href="../assets/bgimg.jpg" type="image/png" />
     <script src="../log/login-out.js"></script>
@@ -43,24 +42,35 @@
           <h1><b>brings you the best</b></h1>
         </div>
         <span class="right-icons">
-          <div class="user-auth">
-            <a href="../log/login.html">Register</a>
-            <span class="beween"><p>/</p></span>
-            <a href="..log/login.html">Log-in</a>
-            <div class="icon-log">
-              <a href="../log/login.html"> <i class="fa fa-user-circle"></i></a>
+          <div class="open">
+            <div class="box" id="box">
+              <!-- Bird image is initially hidden -->
+              <img src="../assets/surprise.png" alt="Bird" id="bird" />
+              <img src="../assets/gift-bag.png" alt="Gift" id="giftImg" />
+            </div>
+
+            <div id="message">
+              <p>You have received a teddy bear from us!</p>
+              <img src="../assets/teddy-bear.png" alt="" />
+              <i class="fa-solid fa-x" id="close"></i>
             </div>
           </div>
         </span>
       </div>
 
       <div class="page-header-tow">
-        <nav class="main-nav">
-          <a href="../../index.html">Home page</a>
-          <a href="../../showcart.html">Shopping card</a>
-          <a href="../news/news.html">Products </a>
-          <a href="../news/news.html"> News </a>
-        </nav>
+        <div class="page-header-tow2">
+          <nav class="main-nav">
+            <a href="../log/login-out.html">Home page</a>
+            <a href="../log/showcart-login-out.html">Shopping cart</a>
+            <a href="product.html">Products</a>
+            <a href="../news/news.html">News</a>
+          </nav>
+          <div id="mobile-menu" class="mobile-menu-btn">
+            <i class="menu-icon fas fa-bars"></i>
+          </div>
+        </div>
+
         <div class="search">
           <div class="input">
             <input
@@ -72,9 +82,7 @@
           </div>
           <div class="shopping-cart">
             <p class="no-ordered-items">0</p>
-            <a href="../../showcart.html"
-              ><i class="icon-cart fa fa-shopping-cart"></i
-            ></a>
+            <i class="icon-cart fa fa-shopping-cart"></i>
           </div>
         </div>
       </div>
@@ -103,7 +111,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product">
             <div class="mt-5">
-              <img src="../assets/chicken2.png" alt="product 1" />
+              <img src="../assets/chicken2.png" alt="product 2" />
             </div>
 
             <div class="product-detail">
@@ -116,7 +124,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product">
             <div class="mt-5">
-              <img src="../assets/chicken2.png" alt="product 1" />
+              <img src="../assets/chicken2.png" alt="product 3" />
             </div>
 
             <div class="product-detail">
@@ -129,7 +137,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product">
             <div class="mt-5">
-              <img src="../assets/chicken2.png" alt="product 1" />
+              <img src="../assets/chicken2.png" alt="product 4" />
             </div>
 
             <div class="product-detail">
@@ -143,7 +151,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product">
             <div class="mt-5">
-              <img src="../assets/chicken2.png" alt="product 1" />
+              <img src="../assets/chicken2.png" alt="product 5" />
             </div>
 
             <div class="product-detail">
@@ -156,7 +164,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product">
             <div class="mt-5">
-              <img src="../assets/chicken2.png" alt="product 1" />
+              <img src="../assets/chicken2.png" alt="product 6" />
             </div>
 
             <div class="product-detail">
@@ -169,7 +177,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product">
             <div class="mt-5">
-              <img src="../assets/chicken2.png" alt="product 1" />
+              <img src="../assets/chicken2.png" alt="product 7" />
             </div>
 
             <div class="product-detail">
@@ -182,7 +190,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="product">
             <div class="mt-5">
-              <img src="../assets/chicken2.png" alt="product 1" />
+              <img src="../assets/chicken2.png" alt="product 8" />
             </div>
 
             <div class="product-detail">

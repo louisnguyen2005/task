@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project</title>
-    <link rel="stylesheet" href="../../index.css" />
     <link rel="stylesheet" href="login-out.css" />
     <link rel="stylesheet" href="../../components/news/news.css" />
     <link rel="icon" href="../../components/assets/bgimg.jpg" type="image/png" />
-    <script src="../../index.js"></script>
+    <script src="cart-login-out.js"></script>
     <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
@@ -38,18 +37,35 @@
   <body class="page">
     <header class="page-header">
       <div class="page-header-one">
-        <img src="../../components/assets/logo.png" />
+        <img src="../assets/logo.png" />
+
         <div class="slogan">
           <h1><b>brings you the best</b></h1>
         </div>
+        <span class="right-icons">
+          <div class="open">
+            <div class="box" id="box">
+              <!-- Bird image is initially hidden -->
+              <img src="../assets/surprise.png" alt="Bird" id="bird" />
+              <img src="../assets/gift-bag.png" alt="Gift" id="giftImg" />
+            </div>
+
+            <div id="message">
+              <p>You have received a teddy bear from us!</p>
+              <img src="../assets/teddy-bear.png" alt="" />
+              <i class="fa-solid fa-x" id="close"></i>
+            </div>
+          </div>
+        </span>
       </div>
+
       <div class="page-header-tow">
         <div class="page-header-tow2">
           <nav class="main-nav">
             <a href="login-out.html">Home page</a>
-            <a href="showcart-login-out.html">Shopping card</a>
-            <a href="./components/news/news.html">Products</a>
-            <a href="./components/news/news.html">News</a>
+            <a href="showcart-login-out.html">Shopping cart</a>
+            <a href="../news/news.html">Products</a>
+            <a href="../news/news.html">News</a>
           </nav>
           <div id="mobile-menu" class="mobile-menu-btn">
             <i class="menu-icon fas fa-bars"></i>

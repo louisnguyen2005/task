@@ -36,13 +36,13 @@ grid-template:
 
 
 
-/* .page-main{
+.page-main{
   display: grid;
 grid-template-areas:
   'page-main-banner'
   'page-main-menu'
 ;
-} */
+}
 
 .page-main-menu {
 display: grid;
@@ -94,7 +94,12 @@ grid-template-rows: repeat(3,1fr);
   width: 100%;
   z-index: 1000; /* Đảm bảo header nằm phía trên các phần tử khác */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng để header nổi bật */
+  
 } 
+
+.page-main {
+  padding-top: 3.2rem;
+}
 
 /* SLOGAN */
 
@@ -133,17 +138,11 @@ margin-left: 5rem;
   object-fit: cover;
 }
 
-.right-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
 .user-auth {
   display: flex;
   align-items: center;
   gap: 1vw;
-padding: 0.4rem;
+  padding: 0.4rem;
 }
 
 .beween p {
@@ -273,18 +272,6 @@ color: black;
    object-fit: cover;
 }
 
-/* PAGE-MAIN-RUN*/
-.run {
-  color: #03db90;
-  font-size: 2rem;
-  font-family: sans-serif;
-  font-weight: bold;
-  position: relative;
-  top: 3rem;
-}
-
-
-
 /* FOOTER OF PAGES */
  footer{
    margin-top: 10vh;
@@ -373,51 +360,6 @@ main{
  
 }
 
-
-/* LEFT-BANNER */
-.left-banner img{
-  width: 18rem;
-    height: 14rem;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-.left-banner { 
-  background-color: #e31837;
-  margin-top: 2.8rem;
-  max-height: 47rem;
- 
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.container-pets{
-  display: flex;
-  margin-top: 9vh;
-}
-
-
-.container-pets img{
-  padding: 0.6rem;
-  width: 3rem;
-  height: 3rem;
-}
-.intro .title {
-  font-size: 2rem; 
-  font-family: 'MergeBlack', sans-serif;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.intro .content {
-  font-size: 1rem;
-  color: white;
-  padding-bottom: 2rem;
-  line-height: 1.5;
-}
-
   
 /* PRODUCTIONS */
 
@@ -496,201 +438,6 @@ transform: translateY(-26.2%);
 .slick-prev:before {
   content: '';
 }
-/* NEWS */
-
-  .news{
-    margin-top: 2rem;
-  text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-attachment: fixed;  
-    background-image: url('./components/assets/backgrNews.jpg');
-  }
-
-  .check{
-    background-color: #b9df2e;
-    margin-left: 1rem;
-    border-radius: 1rem;
-    max-width: 22rem;
-
-  }
-
-  .check .img-of-check img{
-   width: 100%;
-   height: 12rem;
-/* padding-top: 1rem; */
-  }
-
-
-
-  .news h1 {
-    display: inline-block;  
-    margin: 1rem 0;
-    border: 2px solid greenyellow;
-    padding: 1rem; 
-    background-color: aqua;
-    border-radius: 2rem;
-    font-size: 1.6rem;
-}
-
-
-
-  .check h3{
-    padding: 1rem 0;
-    height: 2rem;
-    background: #6ee7ab;
-    border-radius: 5px;
-  }
-
-  .check p{
-    padding: 3vh 0;
-  }
-
-  .contain-a {
-    margin-bottom: 1rem;
-    margin-top: auto;
-  }
-
-  .contain-a a{
-   border-radius: 0.5rem;
-    text-transform: uppercase;
-    text-decoration: none; 
-    color: #fff;
-    border: 2px solid red;
-    background-color: #e31837;
-    padding: 0.5rem 0;
-  }
-
-
-
-
-  /* SET DAY TIME LEFT MAIN */
-  .container-time {
-    width: 10rem;
-    height: 9rem;
-    border: 2px solid black;
-    padding: 0.5rem 0;
-    background-color: #f8ffce;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 4rem;
-    border-radius: 10px;
-  }
-
-  #set-day {
-    font-size: 20px;
-    font-weight: 900;
-    padding: 0.5rem;
-    color: rgb(74, 21, 49);
-  }
-
-  #set-hour {
-    font-size: medium;
-    font-weight: bold;
-
-    text-decoration: double;
-    padding: 0.5rem;
-  }
-
-
-  .sun img{
-width: 3.5rem;
-height: 3rem;
-  }
- 
-  .moon img{
-    width: 3.5rem;
-    height: 3rem;
-
-      }
-
-      /* FOR TOAST */
-
-
-      .blurred {
-        opacity: 0.3; 
-      }
-
-
-      .toast {
-        position: absolute;
-        top: 30px;
-       
-        background-color: rgb(243, 84, 27);
-        box-shadow: 0 6px 43px rgb(0 0 0 / 40%);
-        padding: 15px 20px;
-        overflow: hidden;
-        transition: all 1s;
-        transform: translateX(100%); 
-        opacity: 0; 
-      }
-      .toast.active {
-        transform: translateX(0);
-        opacity: 1; 
-      }
-      .toast-content {
-        display: flex;
-        align-items: center;
-      }
-   .toast-content .chickenicon img{
-    width: 3rem;
-    height: 3rem;
-   }
-      .message {
-        display: flex;
-        flex-direction: column;
-        margin: 0 20px;
-      }
-      .text {
-        font-size: 20px;
-      }
-      .text-1 {
-        font-weight: bold;
-        color: aqua;
-      }
-      .text-2 {
-        color: aliceblue;
-        margin-top: 10px;
-      }
-   
-      .text-2 .pengui img{
-        width: 3rem;
-        height: 3rem;
-       margin-top: 1rem;
-      }
-
-      #closeToast {
-        cursor: pointer;
-        font-size: 20px;
-        color: aliceblue;
-      }
-
-      .propress {
-        left: 0;
-        bottom: 0;
-        height: 2px;
-        width: 0;
-        position: absolute;
-        background-color: #03db90;
-        box-shadow: 0 0 5px #aa06eb, 0 0 10px #7a09a6, 0 0 20px #7f03af,
-          0 0 30px #560477;
-      }
-
-      .toast.active .propress {
-        animation: progress 5s 1s linear;
-      }
-
-      @keyframes progress {
-        100% {
-          width: 100%;
-        }
-      }
-
-
-
 
       .page-header-tow {
         padding-left: 2vw;
@@ -698,7 +445,7 @@ height: 3rem;
         display: flex;
         align-items: center;
         position: relative;
-     padding-top: 0.5rem;
+        padding-top: 0.5rem;
       }
       .page-header-tow2 {
         display: flex;
@@ -748,8 +495,8 @@ height: 3rem;
   } */
 
   .page-header-one img {
-    width: 15rem;
-    height: auto;
+    width: 10rem;
+    height: 11rem;
     object-fit: cover;
   }
 
@@ -757,10 +504,10 @@ height: 3rem;
   .main-nav {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 0.6rem;
     right: 0;
     overflow: hidden;
-    transform: translateY(-3%);
+    transform: translateY(-1%);
   }
 
   .main-nav a {
@@ -780,32 +527,36 @@ height: 3rem;
   .menu-icon {
     color: white;
     font-size: 3.5rem;
-    transform: translateX(-30%);
   }
 
   /* Slogan */
   .slogan h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     margin: 1rem 0;
     position: relative;
-    right: 6rem;
+    right: 7.5rem;
   }
 
 
 
   /* User Authentication */
-  .user-auth a {
-    width: 120px;
-    height: 40px;
-    font-size: 1.2rem;
-    padding: 0.6rem;
-  }
 
   .user-auth {
-    margin-right: 5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-left: -6rem;
   }
 
+  .user-auth a   {
+    width: 5rem;
+    height: 35px;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    
+  }
   /* Shopping Cart */
   .shopping-cart {
     font-size: 2rem;
@@ -816,7 +567,6 @@ height: 3rem;
     margin: 0;
     justify-content: center;
     position: relative;
-    left: -2.5rem;
   }
 
   .input input {
@@ -828,7 +578,10 @@ height: 3rem;
 
   .input i {
     font-size: 1.5rem;
+    position: absolute;
     right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   /* Menu Chính - .page-main-menu */
@@ -852,8 +605,6 @@ height: 3rem;
     font-size: 1.5rem;
     padding: 2.5rem 0;
   }
-
-
 
   /* Footer */
   .page-footer {
@@ -967,51 +718,13 @@ height: 3rem;
     .title-cart-list {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-.menu-icon
 
-    
-.page-main-news{
-  grid-area: 
-  'new_1'
-  'new_2'
-  'new_3'
-  'new_4'
-  'new_5'
-  'new_6'
-  ;
-  display: grid;
-  gap: 20px;
- background-color: rgb(73, 255, 246);
-}
 
-.page-main-news>div{
-  padding: 5rem 0;
-  background-color: rgb(189 255 224);
-}
-/* banner....... */
+  
 .page-main-banner img{
   height: 30rem;
 }
 .page-main-banner{
   margin-bottom: 6rem;
-}
-.newss img{
-  width: 30rem;
-  height: 15rem;
-  object-fit: contain;
-  flex: 3;
-}
-.newss{ 
-justify-content: space-evenly;
-display: flex;
-max-height: 34rem;
-}
-.contentAll{
-  flex: 6;
-}
-.contentAll p{
-  font-size: 30px;
-  font-weight: 400;
-  color: rgb(124, 79, 22);
 }
 

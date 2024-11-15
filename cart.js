@@ -1,44 +1,6 @@
-function isExistedInCart(item, arrCart) {
-    let myIndex = -1;
-    arrCart.forEach((itemCard, index) => {
-        if(item.name == itemCard.name) myIndex = index;    
-    });
-    return myIndex;
-}
-
-let updatedCart = [];
-
-    const selectedItem = (evt) => {
+const selectedItem = (evt) => {
         const linkClicked = evt.target;
-        alert("Sản phẩm đã được thêm vào giỏ hàng");
-
-        if(typeof Storage !== undefined){
-            let newItem = {
-                name: linkClicked.previousElementSibling.children[0].textContent,
-                price: linkClicked.previousElementSibling.children[1].textContent,
-                image: linkClicked.previousElementSibling.previousElementSibling.src, // Lưu đường dẫn ảnh
-                quantity: 1
-            };
-
-        if(JSON.parse(localStorage.getItem('cartItems')) === null){
-            updatedCart.push(newItem);
-            localStorage.setItem('cartItems', JSON.stringify(updatedCart));
-            window.location.reload();
-        } else {
-            const updatedCart = JSON.parse(localStorage.getItem('cartItems'));
-
-            if ( (index = isExistedInCart(newItem, updatedCart)) >=0){
-                updatedCart[index].quantity++;
-            } else {
-                updatedCart.push(newItem);
-            }
-
-            localStorage.setItem('cartItems', JSON.stringify(updatedCart));
-            location.reload();
-        }
-    } else {
-        alert('Local storage is not working on your browser.');
-    }
+        alert("Bạn hãy đăng nhập để thêm sản phẩm vào giỏ hàng");
 }
 
 function addEventToAllCartButtons() {
@@ -50,66 +12,8 @@ function addEventToAllCartButtons() {
 
     const shoppingCart = document.querySelector('.shopping-cart');
     shoppingCart.addEventListener("click", function(){
-        location.href = "showcart.html";
+        alert("Bạn hãy đăng nhập để thêm sản phẩm vào giỏ hàng");
     });
-
-    if(localStorage.cartItems != undefined) {
-        const numberOrderedItems = document.querySelector('.shopping-cart .no-ordered-items');
-        let numberOfItems = 0;
-        let custommerCart = JSON.parse(localStorage.getItem('cartItems'));
-        custommerCart.forEach(item => {
-            numberOfItems += item.quantity;
-        });
-        numberOrderedItems.innerHTML = numberOfItems;
-    }
-}
-
-function showCart() {
-    if(localStorage.cartItems == undefined){
-        alert('Your cart is empty. Please go back homepage to shopping.');
-        location.href = "product-list.html";
-    } else {
-        let custommerCart = JSON.parse(localStorage.getItem('cartItems'));
-        const tblHead = document.getElementsByTagName('thead')[0];
-        const tblBody = document.getElementsByTagName('tbody')[0];
-        const tblHFoot =document.getElementsByTagName('tfoot')[0];
-        let headColumns = bodyRows = footColumns = '';
-        headColumns += '<tr><th>No</th><th>Image</th><th>Product</th>' +
-                        '<th>Quantity</th><th>Price</th></tr>';
-        tblHead.innerHTML = headColumns;
-
-        vat = total = amountPaid = no = 0;
-        if(custommerCart[0] === null) {
-            bodyRows += '<tr><td colspan="5">No items found</td></tr>'
-        } else {
-            custommerCart.forEach(item => {
-                total += Number(item.quantity) * Number(item.price.replace(/[^0-9]/g,""));
-                bodyRows += '<tr><td>' + ++no + '<td><img src="' + item.image + '" alt="' + item.name + '" width="150px"></td>' + 
-                            '</td><td>' + item.name +
-                            '</td><td>' + item.quantity + '</td><td>' +
-                            formatCurrency(item.price.replace(/[^0-9]/g,"")) +
-                            ' <a href="#" onclick="deleteCart(this)"><i class="fa-solid fa-trash-can"></i></a>';
-            });
-        }
-        tblBody.innerHTML = bodyRows;
-
-        footColumns += '<tr><td colspan="4">Subtotal:</td><td>' + formatCurrency(total) + '</td></tr>';
-        footColumns += '<tr><td colspan="4">VAT (10%):</td><td>' + formatCurrency(Math.floor(total*0.1)) + '</td></tr>';
-        footColumns += '<tr><td colspan="4">Grand total:</td><td>' + formatCurrency(Math.floor(1.1*total)) + '</td></tr>';
-        tblHFoot.innerHTML = footColumns;
-    }
-}
-
-function deleteCart(elmt){
-    let updatedDeleteCart = [];
-    let custommerCart = JSON.parse(localStorage.getItem('cartItems'));
-    custommerCart.forEach(item => {
-        if(item.name !== elmt.parentElement.parentElement.children[2].textContent){
-            updatedDeleteCart.push(item);
-        }
-    });
-    localStorage.setItem('cartItems', JSON.stringify(updatedDeleteCart));
-    location.reload();
 }
 
 
@@ -129,3 +33,92 @@ const formatCurrency = (amount, locale = "vi-VN") => {
         maximumFractionDigits: 2
     }).format(amount);
 }
+
+//  Hoạt ảnh banner //
+let index__banner = 1;
+const changeImage = () => {
+  let imgs = [
+    "./components/assets/bgimg.jpg",
+    "./components/assets/banner5.jpg",
+    "./components/assets/banner6.jpg",
+    "./components/assets/banner7.jpg",
+    "./components/assets/banner8.webp",
+  ];
+  document.getElementById("banner").src = imgs[index__banner];
+  index__banner++;
+  if (index__banner == 5) {
+    index__banner = 0;
+  }
+};
+setInterval(changeImage, 4000);
+
+
+// Search item //
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("search-input")
+    .addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      const products = document.querySelectorAll(".product");
+
+      products.forEach((product) => {
+        const productName = product
+          .querySelector(".name")
+          .textContent.toLowerCase();
+        product.style.display = productName.includes(query) ? "block" : "none";
+      });
+    });
+});
+
+
+function addZero(number) {
+    return number < 10 ? "0" + number : number;
+  }
+  
+  function updateDateTime() {
+    let today = new Date();
+    let good = today.getHours() > 18 ? "GOOD EVENING" : "GOOD MORNING";
+    /* Check if it's AM or PM and set the icon */
+    let icon =
+      today.getHours() >= 18
+        ? `<div class="moon"><img src="./components/assets/moonst.png" alt="">
+  </div>`
+        : `<div class="sun"><img src="./components/assets/sun.png" alt=""></div>`;
+  
+    let check = today.getHours() >= 12 ? "PM" : "AM";
+  
+    let time =
+      addZero(today.getHours()) +
+      ":" +
+      addZero(today.getMinutes()) +
+      ":" +
+      addZero(today.getSeconds()) +
+      " " +
+      check;
+  
+    /* DATE */
+    let weekdays = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    let date =
+      weekdays[today.getDay()] +
+      " " +
+      addZero(today.getDate()) +
+      "/" +
+      addZero(today.getMonth() + 1) +
+      "/" +
+      today.getFullYear();
+  
+    document.getElementById("set-day").innerHTML = date;
+    document.getElementById("weather-icon").innerHTML = icon;
+    document.getElementById("set-hour").innerHTML = time;
+    document.getElementById("good").innerHTML = good;
+  }
+  
+  setInterval(updateDateTime, 1000);
