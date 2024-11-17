@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./register.css" />
+    <link
+      rel="icon"
+      href="../components/assets/reset-password.png"
+      type="image/png"
+    />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="reg">
+      <div class="container">
+        <div class="move-username"><label for="username">Username</label></div>
+        <div class="username">
+          <input
+            type="text"
+            tabindex="1"
+            placeholder="Enter your username..."
+            id="username"
+          />
+        </div>
+        <div id="check-username" class="check-username"></div>
+
+        <div class="move-email"><label for="email">Email</label></div>
+        <div class="email">
+          <input
+            type="email"
+            tabindex="2"
+            placeholder="Enter your email..."
+            id="email"
+          />
+        </div>
+        <div id="check-email" class="check-email"></div>
+
+        <div class="pas">
+          <div class="move-password">
+            <label for="password">Password</label>
+          </div>
+          <div class="password">
+            <input
+              type="password"
+              placeholder="Enter your password..."
+              id="password"
+              tabindex="3"
+            />
+          </div>
+          <div id="check-pas" class="check-pas"></div>
+        </div>
+        <div class="regis">
+          <a href="./login.html">Login here!</a>
+          <img src="../components/assets/regis.png" />
+        </div>
+      </div>
+
+      <button id="register-button">Register</button>
+    </div>
+  </body>
+  <script src="./register.js"></script>
+</html>

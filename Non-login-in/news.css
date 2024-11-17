@@ -1,0 +1,72 @@
+/* html {
+    background-image: url("https://phunugioi.com/wp-content/uploads/2021/11/Hinh-anh-binh-yen.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+} */
+.page-main-news{
+    grid-area: 
+    'new_1'
+    'new_2'
+    'new_3'
+    'video'
+    'new_4'
+    'new_5'
+    'new_6'
+    'video_2'
+    ;
+    display: grid;
+    gap: 20px;
+   background-color: rgb(73, 255, 246);
+}
+
+.page-main-news>div{
+    padding: 5rem 0;
+    background-color: rgb(189 255 224);
+}
+/* banner....... */
+.page-main-banner img{
+    height: 30rem;
+}
+.page-main-banner{
+    margin-bottom: 6rem;
+}
+.newss img{
+    width: 30rem;
+    height: 15rem;
+    object-fit: contain;
+    flex: 3;
+}
+.newss{ 
+justify-content: space-evenly;
+display: flex;
+max-height: 34rem;
+}
+.contentAll{
+    flex: 6;
+}
+.contentAll p{
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(124, 79, 22);
+    padding: 0 3vw;
+ 
+}
+
+.run{
+    transform: translateY(15rem);
+  color: rgb(216, 46, 46);
+  }
+video{
+    width: 100%;
+    height: 100%;
+}
+@media (min-width: 430px) and (max-width: 932px){
+    .contentAll p{
+        font-size: 1.13rem;
+        text-align: justify;
+        word-break: break-word;
+        max-width: 90%;
+      
+    }
+}
